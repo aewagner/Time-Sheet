@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timesheet</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Employee Tracker</h1>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">Months Worked</th>
+                <th scope="col">Monthly Rate ($)</th>
+                <th scope="col">Total Billed ($)</th>
+            </tr>
+        </thead>
+        <tbody id="employee-table">
+            <tr>
+                <td>Test Employee</td>
+                <td>Test Role</td>
+                <td>Test Start Date</td>
+                <td>Test Months Worked</td>
+                <td>Test Monthly Rate ($)</td>
+                <td>Test Total Billed ($)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="card">
+        <h5 class="card-header">Add Employee</h5>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="employee-name">Employee Name</label>
+                    <input class="form-control" id="employee-name" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <input class="form-control" id="role" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Start Date (DD/MM/YY - ex: 01/01/89)</label>
+                    <input class="form-control" id="start-date" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="monthly-rate">Monthly Rate</label>
+                    <input class="form-control" id="monthly-rate" type="text">
+                </div>
+                <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="logic.js"></script>
+</body>
+
+</html>
